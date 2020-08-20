@@ -1,0 +1,13 @@
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.exe
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.deps.json
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.runtimeconfig.json
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.runtimeconfig.dev.json
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.dll
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\bin\Debug\netcoreapp3.1\reachability.pdb
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.csprojAssemblyReference.cache
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.AssemblyInfoInputs.cache
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.AssemblyInfo.cs
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.csproj.CoreCompileInputs.cache
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.dll
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.pdb
+D:\Algroithms on Graphs\week1_decomposition1\reachability\reachability\obj\Debug\netcoreapp3.1\reachability.genruntimeconfig.cache
