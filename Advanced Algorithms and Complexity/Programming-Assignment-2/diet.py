@@ -150,7 +150,7 @@ def InnitailizeSimplex(n, m, A, b, c):
     else:
         return False, N, B, A, b, c, 0
 
-
+# this function is replaced by the Simplex function above
 def solve_diet_problem(n, m, A, b, c):  
     # Write your code here
     return False, False #[0, [0] * m]
