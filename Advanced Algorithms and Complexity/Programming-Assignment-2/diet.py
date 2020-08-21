@@ -47,7 +47,7 @@ def Pivot(N, B, A, b, c, v, l, e):
             nHat.append(n)
     for b in B:
         if b != e:
-            bHat.append(b)
+            BHat.append(b)
     return nHat, BHat, aHat, bHat, cHat, vHat
 
 def Simplex(n, m, A, b, c):
