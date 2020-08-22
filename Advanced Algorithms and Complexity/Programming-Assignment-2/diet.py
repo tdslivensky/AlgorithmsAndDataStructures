@@ -107,16 +107,15 @@ def InnitailizeSimplex(n, m, A, b, c):
         if b[i] < b[minIndex]:
             minIndex = i
     if b[minIndex] >= 0:
-        N = [i for i in range(m)]
-        B = [i for i in range(m,n+m)]
+        N = [i for i in range(n)]
+        B = [i for i in range(n,n+m)]
         for i in range(m):
             A.append([])
             for j in range(len(A[0])):
                 A[i+n].append(A[i][j] * -1)
         for i in range(len(A)):
-            A[i].append(0)
-            A[i].append(0)
-            A[i].append(0)
+            for j in range(m):
+                A[i].append(0)
         for i in range(m):
             b.insert(0,0)
             c.append(0)
@@ -133,18 +132,19 @@ def InnitailizeSimplex(n, m, A, b, c):
         A[i].append(0)
         A[i].append(0)
         A[i].append(0)
-    cPrime = [0] * len(c)
-    # for i in range(len(c)):
-    #     cPrime[i] = 0
+    #cPrime = [0] * len(c)
+    cPrime = c.copy()
+    for i in range(len(c)):
+        cPrime[i] = 0
     cPrime.append(-1)
     xNaught = len(cPrime)-1
-    for i in range(m):
+    for i in range(m+1):
         b.insert(0,0)
-        c.append(0)
-    m += 1
-    N = [i for i in range(m)]
-    B = [i for i in range(m,n+m)]
-    l = m + minIndex - 1
+        cPrime.append(0)
+    #m += 1
+    N = [i for i in range(n)]
+    B = [i for i in range(n,m+n)]
+    l = n + minIndex
     N, B, A, b, cPrime, v = Pivot(N, B, A, b, cPrime, 0, l, 0)
     delta = [-1] * len(A)
     equationPositivity = DetermineIndexPositivity(N,cPrime)
@@ -162,16 +162,16 @@ def InnitailizeSimplex(n, m, A, b, c):
         else:
             N, B, A, b, cPrime, v = Pivot(N, B, A, b, cPrime, v, l, e)
         equationPositivity = DetermineIndexPositivity(N,cPrime)
-    if b[xNaught] == 0:
+    if v == 0:
         if xNaught in B:
             for x in N:
                 if A[0][x] != 0:
-                    e = A[0][x]
+                    e = x
                     break
-            N, B, A, b, c, v = Pivot(N, B, A, b, c, v, m, e)
+            N, B, A, b, cPrime, v = Pivot(N, B, A, b, cPrime, v, xNaught, e)
         for a in A:
             a.pop()
-        return True, N, B, A, b, c, 0
+        return True, N, B, A, b, cPrime, 0
     else:
         return False, N, B, A, b, c, 0
 
@@ -196,14 +196,25 @@ def solve_diet_problem(n, m, A, b, c):
 # A = [[-1,-1],[1,0],[0,1]]
 # b = [-1,2,2]
 # c = [-1, 2]
+
+# n,m = 2,2
+# A = [[2,-1], [1, -5]]
+# b = [2, -4]
+# c = [2, -1]
 # n,m = 1, 3
 # A = [[0, 0, 1]]
 # b = [3]
 # c = [1,1,1]
-n,m = 2,2
-A = [[2, -1], [1, -5]]
-b = [2, -4]
-c = [2, -1]
+
+# n,m = 2,2
+# A = [[2, -1], [1, -5]]
+# b = [2, -4]
+# c = [2, -1]
+
+n,m = 5, 5
+A = [[-77, 71, 15, 49, -2],[77, -71, 37, 89, 95],[31, 88, 62, 16, -73],[38, -47, 6, -42, -68],[59, 79, 26, -18, -92]]
+b = [14736, 32998, 7529, 4667, 27779]
+c = [-87, 87, -43, 86, 13]
 anst, ansx = Simplex(n,m,A,b,c) #solve_diet_problem(n, m, A, b, c)
 
 if anst == -1:
