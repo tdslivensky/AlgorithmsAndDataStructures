@@ -1,4 +1,4 @@
-## Data Structures and Algorithms Specialization from coursera 
+## Data Structures and Algorithms Specialization from Coursera 
 
 ## **specialization made up of five(5) classes**
 ###### Note the final capstone course is not yet included in this repo
