@@ -1,4 +1,8 @@
 # python3
+
+#this works for bounded standard solutions (sometimes)
+# further research needed for Big M method https://medium.com/@jacob.d.moore1/coding-the-simplex-algorithm-from-scratch-using-python-and-numpy-93e3813e6e70
+
 from sys import stdin
 import math
 #N is the non basic vars 
